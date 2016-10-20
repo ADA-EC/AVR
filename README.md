@@ -1,2 +1,2 @@
 # AVR
-Nossa tentativa de programar um atmega328p sem utilizar Arduino
+Nossa tentativa de programar um atmega328p utilizando a biblioteca do AVR em C
