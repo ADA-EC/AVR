@@ -9,7 +9,7 @@ echo "************ Making a makefile ************"
 echo ""
 echo "Project name: (default=$PROJECT) "
 read
-if [ ! -z $REPLY]; then
+if [ ! -z $REPLY ]; then
 	PROJECT=$REPLY
 fi
 REPLY=""
