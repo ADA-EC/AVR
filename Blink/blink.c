@@ -2,7 +2,7 @@
 #include <util/delay.h>
 #include <stdio.h>
 
-#define TIME 1000 
+#define TIME 250 
 
 int main() {
 	DDRB |= _BV(DDB5) ;

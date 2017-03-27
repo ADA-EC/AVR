@@ -1,5 +1,5 @@
 NAME=blink
-CPU_F=16000000
+CPU_F=8000000
 
 all: exe
 	avr-objcopy -O ihex -R .eeprom $(NAME) $(NAME).hex
