@@ -1,3 +1,9 @@
+/*
+	pcint9.c
+	Autor: Guilherme Prearo
+	Função: Quando há a borda de subida do sinal na porta C1, o LED na porta D6 inverte de estado
+*/
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>

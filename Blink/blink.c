@@ -1,10 +1,16 @@
+/*
+	blink.c
+	Autor: Guilherme Prearo
+	Função: Pisca um LED na porta D6 com um período de 1s
+*/
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdio.h>
 
 int main() {
 	//Configura a porta D6 como output
-	//A função _BV(DDD6) equivale a (1 << DDD6)
+	//O macro _BV(DDD6) equivale a (1 << DDD6)
 	DDRD |= _BV(DDD6) ;
 
 	while (1) {

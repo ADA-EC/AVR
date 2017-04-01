@@ -1,8 +1,13 @@
+/*
+	pwm.c
+	Autor: Guilherme Prearo
+	Função: Controla a intensidade de um LED na porta D6 por meio do PWM. Aumenta a intensidade até que a variável estoure, então volta do 0.
+*/
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdio.h>
 
-#define TIME 250 
 
 int main() {
 	//Configura a porta D6 como saída

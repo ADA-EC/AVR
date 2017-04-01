@@ -1,3 +1,10 @@
+/*
+	button.c
+	Autor: Guilherme Prearo
+	Função: Lê o estado de um botão na porta C5 e na borda de subida deste sinal inverte o estado do LED na porta D6
+*/
+
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdio.h>

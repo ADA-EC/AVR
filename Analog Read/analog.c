@@ -1,3 +1,9 @@
+/*
+	analog.c
+	Autor: Guilherme Prearo
+	Função: Lê o valor de tensão da porta C0 convertido em um valor digital e então seta o PWM de modoque a intensidade do LED em D6 seja proporcional à tensão
+*/
+
 #include <avr/io.h>
 #include <util/delay.h>
 #include <stdio.h>

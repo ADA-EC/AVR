@@ -1,3 +1,9 @@
+/*
+	timer.c
+	Autor: Guilherme Prearo
+	Função: Pisca o LED em D6 com um período de aproximadamente 1s
+*/
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>

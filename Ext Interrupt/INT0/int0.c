@@ -1,3 +1,10 @@
+/*
+	int0.c
+	Autor: Guilherme Prearo
+	Função: Quando há a borda de subida de um sinal na porta D2, o LED na porta D6 inverte de estado
+*/	
+
+
 #include <avr/io.h>
 //Biblioteca para utilizar as rotinas de interrupção
 #include <avr/interrupt.h>
