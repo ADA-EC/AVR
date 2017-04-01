@@ -1,2 +1,2 @@
 # AVR
-Nossa tentativa de programar um atmega328p utilizando a biblioteca do AVR em C
+Todos os códigos comentados e arquivos do minicurso de Atmega328
