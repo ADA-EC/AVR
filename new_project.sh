@@ -61,7 +61,7 @@ clear:
 
 upload: hex
 	sudo chmod 777 /dev/ttyACM0
-	avrdude -F -V -c arduino -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:\$(NAME).hex
+	avrdude -c avrisp -p ATMEGA328P -P /dev/ttyACM0 -b 115200 -U flash:w:\$(NAME).hex
 EOF
 
 
