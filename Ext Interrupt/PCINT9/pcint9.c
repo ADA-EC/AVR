@@ -5,8 +5,19 @@
 
 //Rotina das interrupções PCINT1
 ISR(PCINT1_vect) {
-	//Acende o LED na porta D6
-	PORTD |= (1 << PD6) ;
+	//Desabilita interrupções
+	SREG &= ~(0x80) ;
+
+	//Testa se foi borda de subida de um sinal
+	if (PINC & (1 << PINC1)) {
+		//Muda o estado da porta D6
+		PORTD ^= (1 << PD6) ;
+		//Debouncing
+		_delay_ms(300) ;
+	}
+
+	//Habilita novamente as interrupções
+	SREG |= 0x80 ;
 }
 
 
@@ -25,9 +36,6 @@ int main() {
 	PCMSK1 = (1 << PCINT9) ; 
 
 	while (1) {
-		//Apaga o LED em D6 cada 1s
-		PORTD &= ~(1 << PD6) ;
-		_delay_ms(1000) ;
 	}
 	return 0 ;
 }

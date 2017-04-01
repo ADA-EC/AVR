@@ -3,19 +3,19 @@
 #include <stdio.h>
 
 int main() {
-	//Configura a porta B5 como output
-	//A função _BV(DDB5) equivale a (1 << DDB5)
-	DDRB |= _BV(DDB5) ;
+	//Configura a porta D6 como output
+	//A função _BV(DDD6) equivale a (1 << DDD6)
+	DDRD |= _BV(DDD6) ;
 
 	while (1) {
-		//Define a saída da porta B5 como nível lógico alto
-		PORTB |= _BV(PORTB5) ;
+		//Define a saída da porta D6 como nível lógico alto
+		PORTD |= _BV(PORTD6) ;
 
 		//Espera por 500ms
 		_delay_ms(500) ;
 
-		//Define a saída da porta B5 como nível lógico baixo
-		PORTB &= ~_BV(PORTB5);
+		//Define a saída da porta D6 como nível lógico baixo
+		PORTD &= ~_BV(PORTD6);
 
 		//Espera mais 500ms
 		_delay_ms(500) ;
@@ -24,14 +24,14 @@ int main() {
 		//Código alternativo (toggle usando XOR)
 
 		//Realiza um XOR entre 1 e o valor da porta (toggle)
-		PORTB ^= (1 << PORTB5) ;
+		PORTD ^= (1 << PORTD6) ;
 		//Espera por 500ms 
 		_delay_ms(500) ;
 		*/
 		
 		/*
-		//Código alternativo 2 (toggle usando reg. PINB)
-		PINB |= (1 << PINB5) ;
+		//Código alternativo 2 (toggle usando reg. PIND)
+		PIND |= (1 << PIND6) ;
 		_delay_ms(500) ;
 		*/
 	}

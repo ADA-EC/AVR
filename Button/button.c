@@ -4,8 +4,8 @@
 
 
 int main() {
-	//Configura a porta B5 como saída
-	DDRB |= _BV(DDB5) ;
+	//Configura a porta D6 como saída
+	DDRD |= _BV(DDD6) ;
 
 	//Configura a porta C5 como entrada
 	DDRC &= ~_BV(DDC5) ;
@@ -19,16 +19,16 @@ int main() {
 		//Atualiza a entrada_ant
 		entrada_ant = entrada;
 		//Lê o valor novo da entrada
-		entrada = PINC ;
+		entrada = (PINC & (1 << PINC5)) ;
 
 		//Se a entrada entá em '1' e édiferente da anterior:
 		//	bordade subida! Então pisca o LED
 		if (entrada > 0 && entrada_ant != entrada) {
-			PORTB ^= (1 << PB5) ;
+			PORTD ^= (1 << PD6) ;
 		}
 
 		//Esperaum tempinho antes de efetuar a próxima leitura
-		_delay_ms(50) ;
+		_delay_ms(10) ;
 	}
 	return 0 ;
 }
